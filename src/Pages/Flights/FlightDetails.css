@@ -1,0 +1,37 @@
+/* FlightDetail.css */
+.flight-detail {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: rgb(241, 177, 57);
+}
+
+.flight-id {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.time {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.seats,
+.price {
+  margin-bottom: 5px;
+}
+
+.book-button {
+  background-color: #3498db; /* Blue color for button */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.book-button:hover {
+  background-color: #2980b9; /* Darker shade for hover effect */
+}
