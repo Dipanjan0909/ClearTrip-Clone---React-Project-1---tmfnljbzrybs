@@ -37,8 +37,9 @@ const FlightBooking = () => {
   return (
     <div style={{display: 'flex'}}>
     <Sidebar/>
-    <div className="flight-booking-container">
-      <div className="flight-form">
+    <div>
+    <div className="flight-booking-container" style={flightData?{display:'flex'}:{}}>
+      <div className="flight-form" style={flightData?{display:'flex', flexDirection:'row'}:{}}>
         <label>
           Origin:
           <input type="text" value={origin} onChange={(e) => setOrigin(e.target.value)} />
@@ -59,13 +60,14 @@ const FlightBooking = () => {
           Passengers:
           <input type="number" value={passengerCount} onChange={(e) => setPassengerCount(e.target.value)} />
         </label>
-        <button onClick={handleSearch}>Search Flights</button>
+        <button onClick={handleSearch}style={flightData?{borderRadius:"12px",height:"60px",width:"120px"}:{}}>Search Flights</button>
       </div>
     </div>
     <div>
     {flightData && flightData.map((item,i)=> 
       <FlightDetail {...item} key={i}/>
     )}
+    </div>
     </div>
     </div>
   );
